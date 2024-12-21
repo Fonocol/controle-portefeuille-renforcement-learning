@@ -49,26 +49,26 @@ projet-controle-portefeuille/
 ### Étapes
 1. **Clonez ce dépôt :**
    ```bash
-git clone https://github.com/Fonocol/-projet-controle-portefeuille-.git
-cd -projet-controle-portefeuille-
+    git clone https://github.com/Fonocol/-projet-controle-portefeuille-.git
+    cd -projet-controle-portefeuille-
    ```
 
 2. **Créez et activez l'environnement virtuel :**
    ```bash
-conda create -n portefeuille-rl python=3.9 -y
-conda activate portefeuille-rl
+    conda create -n portefeuille-rl python=3.9 -y
+    conda activate portefeuille-rl
    ```
 
 3. **Installez les dépendances :**
    ```bash
-pip install -r requirements.txt
+    pip install -r requirements.txt
    ```
 
 4. **Lancez les notebooks ou le script principal :**
    ```bash
-jupyter notebook
-# ou
-python src/...
+    jupyter notebook
+    # ou
+    python src/...
    ```
 
 ---
