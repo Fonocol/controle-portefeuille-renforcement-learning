@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Fond circulaire -->
+  <circle cx="100" cy="100" r="95" fill="#00E676" />
+
+
+  
+
+
+  <!-- Lettre R (créative) -->
+  <path d="M 60 60 Q 80 40 100 60 T 140 60 L 140 140 Q 120 160 100 140 T 60 140 Z" fill="#1e1e1e" />
+  <path d="M 100 100 L 140 100 L 140 140 Q 120 160 100 140 Z" fill="#00E676" />
+
+  <!-- Lettre L (créative) -->
+  <path d="M 160 60 L 160 140 Q 140 160 120 140 L 120 60 Z" fill="#1e1e1e" />
+  <path d="M 120 100 L 160 100 L 160 140 Q 140 160 120 140 Z" fill="#00E676" />
+
+<circle cx="130" cy="70" r="5" fill="#ffffff" />
+  <circle cx="150" cy="70" r="5" fill="#ffffff" />
+<rect x="130" y="80" width="20" height="10" fill="#ffffff" />
+
+  <!-- Texte du projet -->
+  <text x="100" y="160" font-size="16" font-family="Arial, sans-serif" fill="#1e1e1e" text-anchor="middle" font-weight="bold">RL PORTFOLIO</text>
+</svg>

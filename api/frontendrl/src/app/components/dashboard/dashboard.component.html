@@ -1,0 +1,35 @@
+<div class="dashboard-container">
+
+    <!-- Header en haut -->
+    <app-header class="header"></app-header>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <!-- Métriques à gauche -->
+        <app-metrics class="metrics" [decision]="decision" [decisionClass]="decisionClass" [total_value]="total_value" [cash]="cash" [quantite_detenue]="quantite_detenue"></app-metrics>
+
+
+        <!-- Graphique à droite -->
+        <app-chart class="chart" [chartData]="chartData"></app-chart>
+    </div>
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <!-- Métriques à gauche -->
+        <app-metrics class="metrics" [agent]="false"></app-metrics>
+
+        <!-- Graphique à droite -->
+        <app-chart class="chart" [chartData]="bandesChart"></app-chart>
+    </div>
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <!-- Métriques à gauche -->
+        <app-metrics class="metrics" [agent]="false" [message]="rsimessage"></app-metrics>
+
+        <!-- Graphique à droite -->
+        <app-chart class="chart" [chartData]="rsiChartData"></app-chart>
+    </div>
+
+
+    <!-- Footer en bas -->
+    <app-footer></app-footer>
+</div>

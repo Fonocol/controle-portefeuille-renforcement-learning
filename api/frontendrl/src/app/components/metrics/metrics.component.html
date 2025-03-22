@@ -1,0 +1,37 @@
+<div class="metrics-container" *ngIf="agent ; else empty">
+    <div class="metric">
+        <span class="metric-label">Décision Actuelle :</span>
+        <span [ngClass]="decisionClass" class="metric-value">{{ decision }}</span>
+    </div>
+    <div class="metric">
+        <span class="metric-label">Valeur du Portefeuille :</span>
+        <span class="metric-value">${{ total_value }}</span>
+    </div>
+    <div class="metric">
+        <span class="metric-label">Cash :</span>
+        <span class="metric-value">${{ cash }}</span>
+    </div>
+    <div class="metric">
+        <span class="metric-label">Quantité Detenue :</span>
+        <span class="metric-value">{{ quantite_detenue }}</span>
+    </div>
+
+    <div class="footer-section">
+        <h3>Membres du Projet</h3>
+        <ul>
+            <li>FONO Colince</li>
+            <li>LAMAH Richard</li>
+            <li>TOVIEGBE Delphine</li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Encadreur</h3>
+        <p>Mr</p>
+    </div>
+</div>
+
+<ng-template #empty class="metrics-container">
+
+    <p>{{message}}</p>
+
+</ng-template>

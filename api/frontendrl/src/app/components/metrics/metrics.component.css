@@ -1,0 +1,55 @@
+.metrics-container {
+    text-align: left;
+    display: block;
+    justify-content: space-around;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgb(43, 255, 0);
+}
+
+.metric {
+    padding: 5px;
+    text-align: left;
+}
+
+.metric-label {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.metric-value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buy {
+    color: #00E676;
+}
+
+.sell {
+    color: #FF4081;
+}
+
+.neutral {
+    color: #2979FF;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #00E676;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
