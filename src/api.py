@@ -2,9 +2,10 @@ from flask import Flask
 from flask_socketio import SocketIO
 import time
 import threading
-from Agent import Agent
+from agent import Agent
 from PortfolioEnv import PortfolioEnv
-from utils import load_data
+from util import laod_data
+import pandas as pd
 
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")  
@@ -13,11 +14,12 @@ socketio = SocketIO(app, cors_allowed_origins="*")
     
     
 def train():
+    path = 'C:/Users/User/Desktop/s8/projet_tech/projet-controle-portefeuille/data/data_model2.csv'
+    data = pd.read_csv(path)
     record = 0
     score = 0
     portfolio_values = []
-    data = load_data(path="C:/Users/etudiant/Documents/MesEtudes/projet-controle-portefeuille/data/ble_price.csv")
-    portfolioEnv = PortfolioEnv(data, initial_cash=5000,frais_transaction=1.50)
+    portfolioEnv = PortfolioEnv(data, initial_cash=10000,frais_transaction=1.50)
     agent = Agent()
     
         
@@ -27,12 +29,11 @@ def train():
         currentprice = portfolioEnv.getcurentPrice()
         
         final_decision ,decision= agent.get_action(old_state)
-        
         _, reward, done = portfolioEnv.step(final_decision)
         portfolio_values.append(portfolioEnv.total_value) 
         new_state ,_ = agent.get_state(portfolioEnv)
         
-        agent.train_short_memory(old_state,final_decision,reward,new_state,done)
+        agent.train_short_mamory(old_state,final_decision,reward,new_state,done)
         
         #remenber
         # state,action,reward,next_stat,done
@@ -72,5 +73,5 @@ def train():
 
 threading.Thread(target=train, daemon=True).start()
 
-if __name__ == "__main__":
+if __name__== "__main__":
     socketio.run(app, debug=True, host="0.0.0.0", port=5000)
