@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket en Temps Réel</title>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js" integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <h2>📡 Données en Temps Réel</h2>
+    <div id="data-display"></div>
+
+    <script>
+        const socket = io("http://localhost:5000");
+
+        socket.on("update", (data) => {
+            document.getElementById("data-display").innerHTML = `
+                <p><strong>Décision:</strong> ${data.decision}</p>
+                <p><strong>Prix:</strong> ${data.price} €</p>
+                <p><strong>Heure:</strong> ${data.timestamp}</p>
+            `;
+        });
+    </script>
+</body>
+
+</html>

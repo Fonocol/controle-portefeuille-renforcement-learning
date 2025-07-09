@@ -4,7 +4,7 @@ class PortfolioEnv:
     """les gars ici c'est la classe principale de notre 
     environnement vous pouvez ajouter des methodes
     """
-    def __init__(self, data, initial_cash=10000,window_size=5,frais_transaction=10):
+    def __init__(self, data, initial_cash=10000,window_size:int=5,frais_transaction=10):
         self.initial_cash = initial_cash
         self.data = data
         self.cash = initial_cash
